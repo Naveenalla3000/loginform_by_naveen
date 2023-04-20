@@ -1,0 +1,110 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.container{
+    border: 1px double black;
+    width: 50%;
+    height: max-content;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    margin: auto;
+    text-transform: capitalize;
+    background-color: rgb(235, 23, 23);
+    opacity: 0.79;
+    color: white;
+}
+.container input{
+    height: 25px;
+    padding: 2px;
+    color: black;
+    background: rgba(255, 255, 255, .4);
+    
+}
+.con-main{
+    background-image: url(back.webp);
+    background-repeat: no-repeat;
+    background-size: cover;
+    color: black;
+}
+.container select{
+    height: 25px;
+    padding: 3px;
+    background: rgba(255, 255, 255, .4);
+}
+.container h1{
+    margin: 30px auto 5px auto;
+}
+.container h4{
+    margin-bottom: 3px;
+}
+.input label{
+    font-size: 20px;
+}
+.input input{
+    margin: 15px auto;
+    border: 0.5px solid black;
+    border-radius: 2px;
+}
+.input select{
+    margin: 15px auto;
+}
+.input textarea{
+    margin: 15px auto;
+}
+.namediv input{
+    margin-left: 12px;
+    margin-top: 50px;
+}
+.emaildiv {
+    margin-left: -5px;
+}
+.edudiv{
+    width: max-content;
+    margin-left: 32px;
+}
+.gendiv {
+    width: fit-content;
+    margin-left: 39px;
+}
+.adddiv{
+    width: fit-content;
+    margin-left: 25px;
+}
+.passwddiv{
+    width: max-content;
+    margin-left: 38px;
+}
+.repasswddiv{
+    width: max-content;
+    margin-left: -35px;
+}
+.textareadiv{
+    width: max-content;
+    margin-left: 150px;
+}
+.textareadiv label{
+    margin-top: 38px;
+    position: absolute;
+    margin-left: -100px;
+}
+.textareadiv textarea{
+    margin-left: -5px;
+    font-size: 20px;
+    background: rgba(255, 255, 255, .5);
+    font-family: 'Gill Sans';
+}
+.input button{
+    width: 100px;
+    height: 30px;
+    margin: 10px auto;
+    padding: 2px;
+    font-size: 15px;
+    font-weight: 400;
+    background-color:  rgb(235, 23, 23);
+    color: white;
+}

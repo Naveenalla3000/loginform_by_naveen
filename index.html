@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login form</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <form action="https://sheetdb.io/api/v1/01z5frqleeraw" method="post" id="sheetdb-form">
+        <center>
+        <div class="container">
+            <div class="heading">
+                <h1 style="text-transform: uppercase;">Naveen pvt ltd</h1>
+                <marquee width="35%"><h4 style="text-transform: capitalize;">growth with trust</h4></marquee>
+            </div>
+            <hr style="border: 1px double black;">
+            <div class="con-main">
+                <div class="input">
+                <div class="namediv">
+                    <label for="username">student name:</label>
+                    <input id="idname" type="text" name="data[username]" placeholder="Enter your name">
+                </div>
+                <label for="phonenumber">phone number :&nbsp</label>
+                <input id="idphonenumber" type="number" name="data[phonenumber]" placeholder="Enter your pho-number">
+                <div class="emaildiv">
+                    <label for="emailid"> personal email : &nbsp</label>
+                    <input id="idemailid" type="email" name="data[emailid]" placeholder="Enter your email-id">
+                </div>
+                <div class="gendiv">
+                    <label for="gender">gender : </label>
+                <input type="radio" name="data[gender]" value="male">Male
+                <input type="radio" name="data[gender]" value="female">Female
+                <input type="radio" name="data[gender]" value="other">Other<br>
+                </div>
+                <div class="edudiv">
+                    <label for="education">education : &nbsp</label>
+                    <select name="data[education]" id="">
+                    <option value="">select education status</option>
+                    <option value="10">10 standard</option>
+                    <option value="12">12 standard</option>
+                    <option value="b-tech">B-Tech</option>
+                    <option value="m-tech">m-Tech</option>
+                    <option value="phd">Phd</option>
+                    <option value="doctor">Doctorate</option>
+                </select>
+                </div>
+                <div class="adddiv">
+                    <label for="address">address :&nbsp</label>
+                <select name="data[address]" id="add">
+                    <option value=""> select state</option>
+                    <option value="andhra">Andhra pradesh</option>
+                    <option value="Arunachal">Arunachal Pradesh</option>
+                    <option value="Assam">Assam</option>
+                    <option value="andhra">andhara pradesh</option>
+                    <option value="Bihar">Bihar</option>
+                    <option value="Chhattisgarh">Chhattisgarh</option>
+                    <option value="Goa">Goa</option>
+                    <option value="Gujarat">Gujarat</option>
+                    <option value="Jharkhand">jharkhand</option>
+                    <option value="Haryana">Haryana</option>
+                    <option value="telangana">Telangana</option>
+                </select>
+                </div>
+                <div class="passwddiv">
+                    <label for="password">password : &nbsp</label>
+                <input id="idpassword" type="password" name="data[password]">
+                </div>
+                <div class="repasswddiv">
+                    <label for="repassword">re-enter password :&nbsp</label>
+                <input id="repassword" type="password" name="data[repassword]">
+                </div>
+                <div class="textareadiv">
+                    <label for="fill">message :&nbsp</label>
+                <textarea name="data[fill]" id="fill" cols="" rows="3"></textarea>
+
+                </div>
+                <button type="submit" onclick="submit()">submit</button>
+            </div>
+            </div>
+            <p style="font-size: 13px; padding:5px">Developed by Naveen </p>
+        </div>
+    </center>
+    </form>
+    <script>
+        var form = document.getElementById('sheetdb-form');
+        form.addEventListener("submit", e => {
+            e.preventDefault();
+            fetch(form.action, {
+            method : "POST",
+            body: new FormData(document.getElementById("sheetdb-form")),
+            }).then(
+            response => response.json()
+            ).then((html) => {
+                window.open('index2.html', '_blank');
+                });
+            });
+    </script>
+</body>
+</html>
